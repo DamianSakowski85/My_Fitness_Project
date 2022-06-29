@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyFitnessProject" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#D32E66</item>
+        <item name="colorPrimaryVariant">#D32E66</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSurface">@color/white</item> // Normal State
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#D32E66</item>
+        <item name="colorSecondaryVariant">#D32E66</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/customRed</item>
+
+        <item name="android:itemTextAppearance">@style/PopupMenuTextAppearance</item>
+        <item name="navigationViewStyle">@style/Widget.App.NavigationView</item>
+
+    <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+    <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+
+</style>
+<!-- Menu text color -->
+    <style name="PopupMenuTextAppearance" parent="TextAppearance.AppCompat.Menu">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+    <!-- Navigation menu -->
+    <style name="Widget.App.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemShapeFillColor">@color/navigation_item_background_color</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">#EC407A</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="colorPrimary">@color/sep2</item>
+        <item name="colorError">@color/error</item>
+
+    </style>
+
+    <style name="EmptyListStyle">
+        <item name="android:textColor">#F06292</item>
+    </style>
+
+</resources>

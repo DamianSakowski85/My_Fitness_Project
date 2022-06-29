@@ -1,0 +1,165 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Meal tracker</string>
+
+    <string name="menu_foods">Foods</string>
+    <string name="menu_meals">My meals</string>
+    <string name="menu_meals_history">Meals history</string>
+    <string name="menu_body_measurements">Body measurements</string>
+    <string name="menu_info">Info</string>
+
+    <string name="empty"> </string>
+    <string name="required_error">Required</string>
+    <string name="meal_updated">Your meal has been updated!</string>
+    <string name="meal_added">Your meal has been added!</string>
+
+    <string name="to_many_points">this value can contain only one point</string>
+
+    <!-- request keys-->
+    <string name="add_edit_meal_request_key">add_edit_meal</string>
+    <string name="add_edit_food_request_key">add_edit_food</string>
+    <string name="edit_target_request_key">edit_target</string>
+    <string name="edit_portion_request_key">edit_portion</string>
+    <string name="add_portion_request_key">add_portion</string>
+    <string name="add_edit_body_measurements_request_key">add_edit_body_measurements</string>
+    <string name="result">result</string>
+
+    <!-- menu-->
+    <string name="menu">⋮</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="edit_meal">Edit meal</string>
+
+    <string name="cal_format">%1$s kcal</string>
+
+    <string name="bt_add_meals_trans_name">btAddMeals</string>
+
+    <!-- error-->
+    <string name="macros_not_correct">"Sum of macros is not correct!"</string>
+
+    <!-- message-->
+    <string name="target_updated">Target updated!</string>
+    <string name="body_meas_added">Measurements saved</string>
+    <string name="body_meas_updated">Measurements updated</string>
+
+    <string name="portion">portion (gm)</string>
+    <string name="calories">calories</string>
+    <string name="fats">fats</string>
+    <string name="carbs">carbs</string>
+    <string name="proteins">proteins</string>
+    <string name="nutrition_facts">Nutrition facts (100 gm):</string>
+    <string name="others_mostly_water">others (mostly water)</string>
+    <string name="name">name</string>
+    <string name="description">description</string>
+    <string name="no_image_available">no image</string>
+    <string name="no_meals_today">No meals today</string>
+    <string name="add_image">Add image</string>
+    <string name="save">Save</string>
+
+    <string name="no_foods_in_your_database">No foods in your database</string>
+    <string name="meals_summary">Meals summary:</string>
+    <string name="energy">intake</string>
+    <string name="target">target</string>
+    <string name="left">left</string>
+    <string name="change_name">Change name</string>
+    <string name="remove">Remove</string>
+    <string name="change_target">Change target</string>
+    <string name="change_portion">Change portion</string>
+    <string name="no_foods">No foods</string>
+    <string name="clear_meal_history">Delete meals history</string>
+
+    <string name="body_weight">Body weight</string>
+    <string name="waist_size_cm">Waist size</string>
+    <string name="midsection_size_cm">Midsection size</string>
+    <string name="last_measurements">Last measurements:</string>
+    <string name="cm_format">%1$s cm</string>
+    <string name="kg_format">%1$s kg</string>
+    <string name="gm">gm</string>
+
+    <string name="current_measurements">Current measurements:</string>
+    <string name="step_one_bmr">Step one: BMR</string>
+    <string name="bmr_meaning">Basal metabolic rate (BMR) is the total number of calories that your body needs to perform basic, life-sustaining functions</string>
+    <string name="neat_desc">Non-exercise activity thermogenesis (NEAT) is the energy expended for everything we do that is not sleeping, eating or sports-like exercise. It ranges from the energy expended walking to work, typing, performing yard work, undertaking agricultural tasks and fidgeting. Even trivial physical activities increase metabolic rate substantially and it is the cumulative impact of a multitude of exothermic actions that culminate in an individuals daily NEAT</string>
+
+
+    <string name="gender">Gender</string>
+    <string name="man">man</string>
+    <string name="woman">woman</string>
+    <string name="next_step">Next step</string>
+    <string name="calculator">Calculator</string>
+
+
+    <string name="height_cm">Height (cm)</string>
+    <string name="age_cm">Age (cm)</string>
+    <string name="step_two_neat">Step two: NEAT</string>
+    <string name="body_type">Body type</string>
+    <string name="ectomorph">ectomorph</string>
+    <string name="endomorph">endomorph</string>
+    <string name="mesomorph">mesomorph</string>
+    <string name="ectomorphDesc">An ectomorph tends to be thin, and struggles to gain weight as either body fat or muscle.
+        Ectomorphs tends to have a lean build, long limbs, and small muscle bellies. </string>
+    <string name="endomorphDesc">The endomorph tends to gain weight and keep it on.
+        Their build is a little wider than an ectomorph or mesomorph, with a thick ribcage, wide hips, and shorter limbs.
+        They may have more muscle than either of the other body types, but they often struggle to gain it without significant amounts of accompanying body fat.</string>
+    <string name="mesomorphDesc">The mesomorph has a middle-of-the-road build that takes the best of both worlds.
+        They tend to have wide shoulders, a narrow waist, relatively thin joints, and round muscle bellies.
+        In short, if you are a mesomorph, you have a natural tendency to be fit and relatively muscular.</string>
+    <string name="daily_activity_level">Daily activity level:</string>
+    <string name="lov">lov</string>
+    <string name="medium">medium</string>
+    <string name="high_act">high</string>
+    <string name="lovActivityDesc">Sedentary, office worker. You spend most of your day sitting.</string>
+    <string name="medActivityDesc">You spend a large part of your day doing something physical - examples include being a mailman or waitress.</string>
+    <string name="highActivityDesc">You spend most of the day doing heavy physical activity (e.g. bike messenger, carpenter).</string>
+
+    <string name="sessions">sessions</string>
+    <string name="duration">duration</string>
+
+    <string name="under_120">under 120</string>
+    <string name="mid">120–160</string>
+    <string name="above_160">above 160</string>
+    <string name="skip_this">Skip this</string>
+    <string name="step_three_cardio">Step three: cardio</string>
+    <string name="step_four_weight_lifting">Step four: weight lifting</string>
+
+    <string name="lifting_intensity">Intensity</string>
+    <string name="lovLiftingDesc">0 – 40% (% of 1RM)</string>
+    <string name="medLiftingDesc">40 – 70% (% of 1RM)</string>
+    <string name="highLiftingDesc">70 – 100% (% of 1RM)</string>
+    <string name="intensity_desc">(% of 1RM : one rep max) Let’s say your maximum load is 100 pounds for the bench press. If you were successfully lifting 40 pounds for five reps, your weightlifting intensity for that exercise would be 40%.</string>
+    <string name="bmr">Bmr</string>
+    <string name="summary">Summary</string>
+    <string name="neat">Neat</string>
+    <string name="cardio">Cardio</string>
+    <string name="weight_lifting">Weight lifting</string>
+
+    <string name="cal_description">This tool can help you calculate the amount of calories that you need to maintain your body composition. You can increase that value to build muscle or decrease to lose weight.</string>
+    <string name="start">Start</string>
+
+    <string name="current_calculation">Current calculation:</string>
+    <string name="search">Search</string>
+    <string name="my_fitness_project">My Fitness Project</string>
+    <string name="damiansakowski85_gmail_com">damiansakowski85@gmail.com</string>
+    <string name="info_label1" tools:ignore="PluralsCandidate">This App is a complete free tool to track your daily calories intake and macro. There is no ads, no need to create any account. This App work 100% offline. Food database is not complete, but you can add your favorite foods und customize it how you want. This App is a hobby project, created with passion to nutrition and fitness.</string>
+    <string name="label_info2">If you found this App useful, please support me on paypal:</string>
+    <string name="label_info3">Support from users will help me to provide updates and develop better functions.</string>
+    <string name="heart_rate_per_minute">Heart rate per minute</string>
+
+    <string name="energy_kcal">Energy (kcal)</string>
+    <string name="macronutrients_gm">Macronutrients (gm)</string>
+    <string name="today">Today:</string>
+    <string name="meal_name">meal name</string>
+    <string name="add_meal">Add meal</string>
+    <string name="selected_food_added_to_meal_list">Selected food has been added to your list!</string>
+    <string name="fab_add_meal_trans_name">fab_add_meals_trans_name</string>
+    <string name="history_is_empty">History is empty</string>
+    <string name="edit_measurements">Edit measurements</string>
+    <string name="body_weight_on_chart">Body weight on chart</string>
+    <string name="waist_size_on_chart">Waist size on chart</string>
+    <string name="midsection_size_on_chart">Midsection size on chart</string>
+    <string name="delete_all_measurements">Delete all measurements data</string>
+    <string name="show_charts">Show charts</string>
+    <string name="_0">0</string>
+    <string name="chart_data_is_available">Chart data is available after 5 measurements</string>
+    <string name="save_as_target">Save as target</string>
+    <string name="finish">Finish</string>
+</resources>

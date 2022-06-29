@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_meals">
+
+    <fragment
+        android:id="@+id/nav_meals"
+        android:name="com.damian.myfitnessproject.ui.meals.MealsFragment"
+        android:label="@string/menu_meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_nav_meals_to_deleteMealDialog"
+            app:destination="@id/deleteMealDialog" />
+        <action
+            android:id="@+id/action_nav_meals_to_addEditMealFragment"
+            app:destination="@id/addEditMealFragment" />
+        <action
+            android:id="@+id/action_nav_meals_to_editTargetFragment"
+            app:destination="@id/editTargetFragment" />
+        <action
+            android:id="@+id/action_nav_meals_to_mealContentFragment"
+            app:destination="@id/mealContentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_meals_history"
+        android:name="com.damian.myfitnessproject.ui.mealsHistory.MealsHistoryFragment"
+        android:label="@string/menu_meals_history"
+        tools:layout="@layout/fragment_meals_history" >
+        <action
+            android:id="@+id/action_nav_meals_history_to_mealsHistoryContentFragment"
+            app:destination="@id/mealsHistoryContentFragment" />
+        <action
+            android:id="@+id/action_nav_meals_history_to_clearMealHistoryDialog"
+            app:destination="@id/clearMealHistoryDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mealsHistoryContentFragment"
+        android:name="com.damian.myfitnessproject.ui.mealsHistory.mealsHistoryContent.MealHistoryContentFragment"
+        tools:layout="@layout/fragment_meal_history_content" >
+        <argument
+            android:name="meal"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Meal" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_body_measurements"
+        android:name="com.damian.myfitnessproject.ui.bodyMeasurements.BodyMeasurementsFragment"
+        android:label="@string/menu_body_measurements"
+        tools:layout="@layout/fragment_body_measurements" >
+        <action
+            android:id="@+id/action_nav_body_measurements_to_addEditMeasurementsFragment2"
+            app:destination="@id/addEditMeasurementsFragment2" />
+        <action
+            android:id="@+id/action_nav_body_measurements_to_deleteAllMeasurementsFragment"
+            app:destination="@id/deleteAllMeasurementsFragment" />
+        <action
+            android:id="@+id/action_nav_body_measurements_to_bodyMeasurementsChartsFragment2"
+            app:destination="@id/bodyMeasurementsChartsFragment2" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.damian.myfitnessproject.ui.appInfo.AboutAppFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_about_app" />
+
+    <fragment
+        android:id="@+id/nav_foods"
+        android:name="com.damian.myfitnessproject.ui.foods.FoodsFragment"
+        android:label="@string/menu_foods"
+        tools:layout="@layout/fragment_foods">
+
+        <action
+            android:id="@+id/action_nav_foods_to_addEditFoodFragment"
+            app:destination="@id/addEditFoodFragment" />
+        <action
+            android:id="@+id/action_nav_foods_to_deleteFoodDialog"
+            app:destination="@id/deleteFoodDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_food_details"
+        android:name="com.damian.myfitnessproject.ui.foodDetails.FoodDetailsFragmentKt"
+        android:label="Food details"
+        tools:layout="@layout/fragment_food_details">
+        <argument
+            android:name="food"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Food" />
+        <argument
+            android:name="macro_title"
+            app:argType="string" />
+        <argument
+            android:name="portionSize"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditFoodFragment"
+        android:name="com.damian.myfitnessproject.ui.foods.addEdit.AddEditFoodFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_food_add_edit" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="food"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Food"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_addEditFoodFragment_to_takePhotoFragment"
+            app:destination="@id/takePhotoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/takePhotoFragment"
+        android:name="com.damian.myfitnessproject.ui.foods.addEdit.TakePhotoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_food_take_photo" /><action android:id="@+id/action_global_nav_food_details" app:destination="@id/nav_food_details"/>
+
+    <dialog
+        android:id="@+id/deleteFoodDialog"
+        android:name="com.damian.myfitnessproject.ui.foods.delete.DeleteFoodDialog"
+        android:label="DeleteFoodDialog" >
+        <argument
+            android:name="foodItem"
+            app:argType="com.damian.myfitnessproject.data.repository.model.FoodItem" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/deleteMealDialog"
+        android:name="com.damian.myfitnessproject.ui.meals.delete.DeleteMealDialog"
+        android:label="DeleteMealDialog" >
+        <argument
+            android:name="meal"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Meal" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/addEditMealFragment"
+        android:name="com.damian.myfitnessproject.ui.meals.addEdit.AddEditMealFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_meal_add_edit" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="meal"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Meal"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editTargetFragment"
+        android:name="com.damian.myfitnessproject.ui.meals.target.EditTargetFragment"
+        android:label="Change target"
+        tools:layout="@layout/fragment_edit_target" >
+        <argument
+            android:name="target"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mealContentFragment"
+        android:name="com.damian.myfitnessproject.ui.meals.mealContent.MealContentFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_meal_content" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="meal"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Meal" />
+        <action
+            android:id="@+id/action_mealContentFragment_to_deleteMealContentDialog"
+            app:destination="@id/deleteMealContentDialog" />
+        <action
+            android:id="@+id/action_mealContentFragment_to_editPortionFragment"
+            app:destination="@id/editPortionFragment" />
+        <action
+            android:id="@+id/action_mealContentFragment_to_selectFoodsFragment"
+            app:destination="@id/selectFoodsFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/deleteMealContentDialog"
+        android:name="com.damian.myfitnessproject.ui.meals.mealContent.delete.DeleteMealContentDialog"
+        android:label="DeleteMealContentDialog" >
+        <argument
+            android:name="mealContentItem"
+            app:argType="com.damian.myfitnessproject.data.repository.model.MealContentItem" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/editPortionFragment"
+        android:name="com.damian.myfitnessproject.ui.meals.mealContent.editPortion.EditPortionFragment"
+        android:label="Change portion"
+        tools:layout="@layout/fragment_edit_portion" >
+        <argument
+            android:name="mealContentItem"
+            app:argType="com.damian.myfitnessproject.data.repository.model.MealContentItem" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectFoodsFragment"
+        android:name="com.damian.myfitnessproject.ui.meals.mealContent.selectFoods.SelectFoodsFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_select_foods" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="meal"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Meal" />
+        <action
+            android:id="@+id/action_selectFoodsFragment_to_addPortionFragment"
+            app:destination="@id/addPortionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPortionFragment"
+        android:name="com.damian.myfitnessproject.ui.meals.mealContent.selectFoods.addPortion.AddPortionFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_portion" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="meal"
+            app:argType="com.damian.myfitnessproject.data.database.entity.Meal" />
+        <argument
+            android:name="foodItem"
+            app:argType="com.damian.myfitnessproject.data.repository.model.FoodItem" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calStartFragment"
+        android:name="com.damian.myfitnessproject.ui.calculator.start.CalStartFragment"
+        android:label="Calculator"
+        tools:layout="@layout/fragment_cal_start" >
+        <action
+            android:id="@+id/action_calStartFragment_to_calBmrFragment"
+            app:destination="@id/calBmrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calBmrFragment"
+        android:name="com.damian.myfitnessproject.ui.calculator.bmr.CalBmrFragment"
+        android:label="@string/step_one_bmr"
+        tools:layout="@layout/fragment_cal_bmr" >
+        <action
+            android:id="@+id/action_calBmrFragment_to_calNeatFragment"
+            app:destination="@id/calNeatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calNeatFragment"
+        android:name="com.damian.myfitnessproject.ui.calculator.neat.CalNeatFragment"
+        android:label="@string/step_two_neat"
+        tools:layout="@layout/fragment_cal_neat" >
+        <action
+            android:id="@+id/action_calNeatFragment_to_calCardioFragment"
+            app:destination="@id/calCardioFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calCardioFragment"
+        android:name="com.damian.myfitnessproject.ui.calculator.cardio.CalCardioFragment"
+        android:label="@string/step_three_cardio"
+        tools:layout="@layout/fragment_cal_cardio" >
+        <action
+            android:id="@+id/action_calCardioFragment_to_calLiftingFragment"
+            app:destination="@id/calLiftingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calLiftingFragment"
+        android:name="com.damian.myfitnessproject.ui.calculator.lifting.CalLiftingFragment"
+        android:label="@string/step_four_weight_lifting"
+        tools:layout="@layout/fragment_cal_lifting" >
+        <action
+            android:id="@+id/action_calLiftingFragment_to_calSummaryFragment"
+            app:destination="@id/calSummaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calSummaryFragment"
+        android:name="com.damian.myfitnessproject.ui.calculator.summary.CalSummaryFragment"
+        android:label="Calculator summary"
+        tools:layout="@layout/fragment_cal_summary" >
+        <action
+            android:id="@+id/action_calSummaryFragment_pop_including_calStartFragment"
+            app:popUpTo="@id/calStartFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/clearMealHistoryDialog"
+        android:name="com.damian.myfitnessproject.ui.mealsHistory.deleteAll.ClearMealHistoryDialog"
+        android:label="ClearMealHistoryDialog" />
+
+    <fragment
+        android:id="@+id/addEditMeasurementsFragment2"
+        android:name="com.damian.myfitnessproject.ui.bodyMeasurements.addEdit.AddEditMeasurementsFragment"
+        android:label="Edit body measurements"
+        tools:layout="@layout/fragment_add_edit_body_measurements" >
+        <argument
+            android:name="bodyMeasurements"
+            app:argType="com.damian.myfitnessproject.data.database.entity.BodyMeasurements"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/deleteAllMeasurementsFragment"
+        android:name="com.damian.myfitnessproject.ui.bodyMeasurements.deleteAll.DeleteAllMeasurementsFragment"
+        android:label="DeleteAllMeasurementsFragment" />
+    <fragment
+
+        android:id="@+id/bodyMeasurementsChartsFragment2"
+        android:name="com.damian.myfitnessproject.ui.bodyMeasurements.lineCharts.BodyMeasurementsChartsFragment"
+        android:label="@string/menu_body_measurements"
+        tools:layout="@layout/fragment_body_measurements_charts" />
+</navigation>

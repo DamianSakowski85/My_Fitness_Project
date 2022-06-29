@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:transitionGroup="true"
+    tools:context="com.damian.myfitnessproject.ui.mealsHistory.mealsHistoryContent.MealHistoryContentFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/rv_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title"
+        tools:listitem="@layout/item_meal_history_content" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="14sp"
+        android:text="@string/summary"
+        app:layout_constraintBottom_toTopOf="@id/layout_summary" />
+
+    <include
+        android:id="@+id/layout_summary"
+        layout="@layout/layout_simple_meals_summary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

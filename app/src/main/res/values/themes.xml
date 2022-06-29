@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyFitnessProject" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#C51162</item>
+        <item name="colorPrimaryVariant">#C51162</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/customRed</item>
+        <item name="colorSecondaryVariant">@color/customRed</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">#E6EAEF</item>
+        <item name="navigationViewStyle">@style/Widget.App.NavigationView</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+    </style>
+
+    <!-- Navigation menu -->
+    <style name="Widget.App.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="android:background">#E6EAEF</item>
+    </style>
+
+    <style name="Theme.MyFitnessProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyFitnessProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyFitnessProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="colorError">@color/error</item>
+
+    </style>
+
+    <style name="EmptyListStyle">
+        <item name="android:textColor">@color/customRed</item>
+    </style>
+</resources>
