@@ -23,8 +23,6 @@ import com.google.android.material.transition.MaterialSharedAxis
 import dagger.hilt.android.AndroidEntryPoint
 import damian.myfitnessproject.R
 import damian.myfitnessproject.databinding.FragmentFoodsBinding
-import kotlinx.coroutines.flow.collect
-
 
 @AndroidEntryPoint
 class FoodsFragment : Fragment(R.layout.fragment_foods), FoodAdapter.OnItemClickListener {
